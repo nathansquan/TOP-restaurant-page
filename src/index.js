@@ -1,5 +1,4 @@
-import loadHome from "./home";
+import firstLoad from './firstLoad';
 import './css/style.css';
 
-console.log('hello, world!');
-loadHome();
+firstLoad();
