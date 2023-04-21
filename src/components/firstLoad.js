@@ -1,4 +1,4 @@
-import loadHome from "./home";
+import loadHome from "../home/home.js";
 
 function firstLoad() {
     loadHome(); 

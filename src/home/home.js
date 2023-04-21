@@ -1,7 +1,6 @@
-import { createBanner, createTabBar } from "./createBanner";
+import { createBanner, createTabBar } from "../components/createBanner.js";
 
 function loadHome() {
-    console.log('hi from home.js'); 
     const content = document.getElementById("content");
 
     content.appendChild(createBanner());
