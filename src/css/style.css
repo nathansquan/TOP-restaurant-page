@@ -4,9 +4,16 @@ body {
 
 .home {
     text-align: center;
-    font-size: 3em;
     color: #ffffff;
     background: no-repeat url('../banner-crop.jpg');
     padding-top: 200px;
     padding-bottom: 300px;
 }
+
+.home > .restaurantName {
+    font-size: 4em;
+}
+.home > .tagLine {
+    font-size: 1.5em;
+}
+

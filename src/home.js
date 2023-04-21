@@ -1,8 +1,17 @@
 function createHome() {
     const home = document.createElement("div");
     home.classList.add("home");
-    home.textContent = "Welcome to Vietnamese Restaurant";
 
+    const restaurantName = document.createElement("div");
+    restaurantName.classList.add("restaurantName");
+    restaurantName.textContent = "Taste of Vietnam";
+
+    const tagLine = document.createElement("div");
+    tagLine.classList.add("tagLine");
+    tagLine.textContent = "Fresh regional dishes from across Vietnam"
+
+    home.appendChild(restaurantName);
+    home.appendChild(tagLine);
     return home;
 }
 
