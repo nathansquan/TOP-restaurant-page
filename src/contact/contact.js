@@ -1,5 +1,6 @@
 import Address from "../components/address.js";
 import { createBanner } from "../components/createBanner.js";
+import Phone from "../components/phone.js";
 
 class Contact {
     #addressObj = {
@@ -9,6 +10,8 @@ class Contact {
         zipcode: "12345",
     }
 
+    #phoneNumber = "(123)-456-7890";
+
     constructor(address) {
         this.address = new Address(
             this.#addressObj.street,
@@ -16,7 +19,7 @@ class Contact {
             this.#addressObj.state,
             this.#addressObj.zipcode
         );
-        //this.phone = phone;
+        this.phone = new Phone(this.#phoneNumber);
         //this.hours = hours;
     }
 
@@ -25,6 +28,7 @@ class Contact {
         content.appendChild(createBanner());
         
         content.appendChild(this.address.createAddress());
+        content.appendChild(this.phone.createPhone());
 
     }
 }
