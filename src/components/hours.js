@@ -1,3 +1,6 @@
+import capitalizeWord from "./capitalize";
+
+capitalizeWord
 class Hours {
     constructor(hours) {
         this.hours = hours; // hours should be an object
@@ -23,7 +26,7 @@ class Hours {
 
                 if (j === 0) {
                     // get days of the week
-                    cell.textContent = Object.keys(this.hours)[i];
+                    cell.textContent = capitalizeWord(Object.keys(this.hours)[i]);
                 } else {
                     // get hours corresponding to that day
                     cell.textContent = Object.values(this.hours)[i];
