@@ -1,4 +1,4 @@
-import capitalizeWord from "./capitalize";
+import capitalizeWord from "./capitalizeWord.js";
 
 capitalizeWord
 class Hours {
