@@ -1,5 +1,6 @@
 import Address from "../components/address.js";
 import { createBanner } from "../components/createBanner.js";
+import Hours from "../components/hours.js";
 import Phone from "../components/phone.js";
 
 class Contact {
@@ -12,7 +13,17 @@ class Contact {
 
     #phoneNumber = "(123)-456-7890";
 
-    constructor(address) {
+    #hours = {
+        sunday: "11:00 AM - 9:00 PM",
+        monday: "Closed",
+        tuesday: "11:00 AM - 9:00 PM",
+        wednesday: "11:00 AM - 9:00 PM",
+        thursday: "11:00 AM - 9:00 PM",
+        friday: "11:00 AM - 9:00 PM",
+        saturday: "11:00 AM - 9:00 PM",
+    }
+
+    constructor() {
         this.address = new Address(
             this.#addressObj.street,
             this.#addressObj.city,
@@ -20,7 +31,7 @@ class Contact {
             this.#addressObj.zipcode
         );
         this.phone = new Phone(this.#phoneNumber);
-        //this.hours = hours;
+        this.hours = new Hours(this.#hours);
     }
 
     loadContact() {
@@ -29,7 +40,7 @@ class Contact {
         
         content.appendChild(this.address.createAddress());
         content.appendChild(this.phone.createPhone());
-
+        content.appendChild(this.hours.createHours());
     }
 }
 
