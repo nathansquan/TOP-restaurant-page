@@ -1,4 +1,4 @@
-import { createBanner, createTabBar } from "../components/createBanner.js";
+import { createBanner } from "../components/createBanner.js";
 
 function loadHome() {
     const content = document.getElementById("content");
