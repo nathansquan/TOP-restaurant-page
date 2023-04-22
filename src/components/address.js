@@ -9,6 +9,7 @@ class Address {
     createAddress() {
         const addressDiv = document.createElement("div");
         addressDiv.classList.add("address");
+        addressDiv.textContent = "Address";
 
         const addressLine1Div = document.createElement("div");
         addressLine1Div.classList.add("address-line-1");
