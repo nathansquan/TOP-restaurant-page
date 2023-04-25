@@ -9,7 +9,8 @@ class Address {
     createAddress() {
         const addressDiv = document.createElement("div");
         addressDiv.classList.add("address");
-        addressDiv.textContent = "Address";
+        const addressH2 = document.createElement("h2");
+        addressH2.textContent = "Address";
 
         const addressLine1Div = document.createElement("div");
         addressLine1Div.classList.add("address-line-1");
@@ -19,6 +20,7 @@ class Address {
         addressLine2Div.classList.add("address-line-2");
         addressLine2Div.textContent = `${this.city}, ${this.state} ${this.zipcode}`;
 
+        addressDiv.appendChild(addressH2);
         addressDiv.appendChild(addressLine1Div);
         addressDiv.appendChild(addressLine2Div);
 

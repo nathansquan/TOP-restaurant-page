@@ -47,8 +47,11 @@ class Hours {
     createHours() {
         const hoursDiv = document.createElement("div");
         hoursDiv.classList.add("hours");
-        hoursDiv.textContent = "Hours";
 
+        const hoursH2 = document.createElement("h2");
+        hoursH2.textContent = "Hours";
+
+        hoursDiv.appendChild(hoursH2);
         hoursDiv.appendChild(this.generateTable());
 
         return hoursDiv;
