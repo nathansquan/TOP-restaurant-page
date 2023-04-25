@@ -5,23 +5,30 @@ import loadHome from './home/home.js';
 
 firstLoad();
 
-const content = document.querySelector("#content");
-content.addEventListener("click", clickHandlerTab);
+const btns = document.querySelectorAll(".tabBar > button");
+btns.forEach(btn => btn.addEventListener("click", clickHandlerTab));
 
 function clickHandlerTab(e) {
     // clear page contents
     content.textContent = "";
 
     switch (e.target.className) {
-        case 'homeBtn':
+        case 'homeBtn': {
             loadHome();
+            const btns = document.querySelectorAll(".tabBar > button");
+            btns.forEach(btn => btn.addEventListener("click", clickHandlerTab));
             break;
-        case 'menuBtn':
+        }
+        case 'menuBtn': {
             break;
-        case 'contactBtn':
+        }
+        case 'contactBtn': {
             const contact = new Contact;
             contact.loadContact();
+            const btns = document.querySelectorAll(".tabBar > button");
+            btns.forEach(btn => btn.addEventListener("click", clickHandlerTab));
             break;
+        }
         default:
             break;
     }
