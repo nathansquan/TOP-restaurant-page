@@ -44,10 +44,15 @@ body {
     text-align: center;
 }
 
+.address {
+    padding-top: 40px;
+}
+
 .hours {
    display: flex; 
    flex-direction: column;
    align-items: center;
+   padding-bottom: 100px;
 }
 
 td {
