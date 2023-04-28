@@ -1,7 +1,8 @@
 import firstLoad from './components/firstLoad.js';
-import Contact from './contact/contact.js';
 import './css/style.css';
 import loadHome from './home/home.js';
+import Menu from './menu/menu.js';
+import Contact from './contact/contact.js';
 
 firstLoad();
 
@@ -20,6 +21,10 @@ function clickHandlerTab(e) {
             break;
         }
         case 'menuBtn': {
+            const menu = new Menu;
+            menu.loadMenu();
+            const btns = document.querySelectorAll(".tabBar > button");
+            btns.forEach(btn => btn.addEventListener("click", clickHandlerTab));
             break;
         }
         case 'contactBtn': {
