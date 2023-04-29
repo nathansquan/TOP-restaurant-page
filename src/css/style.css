@@ -58,3 +58,31 @@ body {
 td {
     padding-right: 20px;
 }
+
+/* Menu page styling */
+.menu {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+.menu > h1 {
+    text-align: center;
+}
+
+.menuItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuItem > div {
+    display: grid;
+    grid-template-columns: repeat(2, 300px) 100px;
+    column-gap: 50px;
+}
+
+.price {
+    justify-self: start;
+}
+.menuItem img {
+    width: 300px;
+}

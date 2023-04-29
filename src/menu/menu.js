@@ -37,9 +37,9 @@ class Menu {
         const menuDiv = document.createElement("div");
         menuDiv.classList.add("menu");
 
-        const menuH2 = document.createElement("h2");
-        menuH2.textContent = "Menu";
-        menuDiv.appendChild(menuH2);
+        const menuH1 = document.createElement("h1");
+        menuH1.textContent = "Menu";
+        menuDiv.appendChild(menuH1);
 
         this.menu.forEach(menuItem => {
             const item = new MenuItem(

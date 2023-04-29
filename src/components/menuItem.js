@@ -16,16 +16,19 @@ class MenuItem {
 
         // image
         const menuItemPictureDiv = document.createElement("div");
+        menuItemPictureDiv.classList.add("picture");
         const menuItemPicture = new Image();
         menuItemPicture.src = this.pictureURL;
         menuItemPictureDiv.appendChild(menuItemPicture);
 
         // description
         const menuItemDescriptionDiv = document.createElement("div");
+        menuItemDescriptionDiv.classList.add("description");
         menuItemDescriptionDiv.textContent = this.description;
 
         // price
         const menuItemPriceDiv = document.createElement("div");
+        menuItemPriceDiv.classList.add("price");
         menuItemPriceDiv.textContent = `\$${this.price}`;
 
         menuItemContentDiv.appendChild(menuItemPictureDiv);
