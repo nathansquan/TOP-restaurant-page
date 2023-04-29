@@ -18,6 +18,35 @@ body {
     font-size: 1.5em;
 }
 
+.reviewH1 {
+    padding-top: 40px;
+    text-align: center;
+}
+.reviews {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote p {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
 /* Tab styling */
 .tabBar {
     padding-top: 50px;

@@ -1,7 +1,8 @@
-import loadHome from "../home/home.js";
+import Home from "../home/home";
 
 function firstLoad() {
-    loadHome(); 
+    const home = new Home;
+    home.loadHome(); 
 }
 
 export default firstLoad;

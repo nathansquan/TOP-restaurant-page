@@ -1,6 +1,6 @@
 import firstLoad from './components/firstLoad.js';
 import './css/style.css';
-import loadHome from './home/home.js';
+import Home from './home/home.js';
 import Menu from './menu/menu.js';
 import Contact from './contact/contact.js';
 
@@ -15,7 +15,8 @@ function clickHandlerTab(e) {
 
     switch (e.target.className) {
         case 'homeBtn': {
-            loadHome();
+            const home = new Home;
+            home.loadHome();
             const btns = document.querySelectorAll(".tabBar > button");
             btns.forEach(btn => btn.addEventListener("click", clickHandlerTab));
             break;
