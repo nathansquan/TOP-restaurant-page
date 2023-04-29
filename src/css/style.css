@@ -59,11 +59,17 @@ blockquote p::after {
     color: #ffffff;
     background-color: rgb(0, 0, 0); /* fallback color */
     background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s;
     font-size: 1.5em;
     font-weight: 500;
     border: 2px solid #f1f1f1;
     border-radius: 3px;
     padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tabBar button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Contact page styling */
